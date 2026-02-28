@@ -1,0 +1,125 @@
+html {
+  font-size: 14px;
+}
+
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.btn:focus, .btn:active:focus, .btn-link.nav-link:focus, .form-control:focus, .form-check-input:focus {
+  box-shadow: 0 0 0 0.1rem white, 0 0 0 0.25rem #258cfb;
+}
+
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  margin-bottom: 60px;
+}
+
+.form-floating > .form-control-plaintext::placeholder, .form-floating > .form-control::placeholder {
+  color: var(--bs-secondary-color);
+  text-align: end;
+}
+
+.form-floating > .form-control-plaintext:focus::placeholder, .form-floating > .form-control:focus::placeholder {
+  text-align: start;
+}
+
+.about-container h1 {
+  font-weight: 600; 
+  margin-top: 10px;
+}
+
+.about-container {
+  padding: 20px;
+  gap: 20px;
+  font-size: x-large;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+.contact-container {
+  padding: 20px;
+  gap: 20px;
+  font-size: large;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
+.project-card {
+  border: 2px;
+  border-style: solid;
+  border-color: #258cfb;
+  background: #0b0e12;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+
+}
+
+.card-header {
+  background: #0f141b;
+  display: flex; ;
+  align-items: start;
+  gap: 20px;
+}
+
+.card-title, .card-codeAvail {
+  color: #F3F6FF;
+
+}
+
+.card-description {
+  color: #F3F6FFAE;
+  text-align: left;
+  margin-top: 10px;
+}
+
+.tags-container {
+  margin-top: 10px;
+  margin-bottom: 20px;
+}
+
+.tool-badge {
+  border: 2px solid black;
+  width: auto;
+  height: auto;
+  font-size: small;
+  color: #258cfb;
+  gap: 5px;
+  border-radius: 0%;
+  background: #F3F6FF;
+}
+
+
+
+.demo-container a {
+  color: #F3F6FFAE;
+  width: auto;
+  height: auto;
+  border: 2px solid black;
+  border-radius: 0%;
+  backdrop-filter: blur(5px);
+  background-color: #36f2c252;
+  background: #36f2c217;
+  color: #36f2c2f2;
+}
+
+.demo-container a:hover {
+  background: #36f2c252;
+  color: #36f2c2f2;
+}
+
+
+.contact-footer {
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  margin-top: 20px;
+  padding: 20px;
+}
+
+.contact-footer li {
+  font-weight: 600;
+  padding: 8px;
+}

@@ -1,0 +1,64 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<div class="text-center my-5">
+    <div class="about-container">
+        <h1 class="display-4 ">Jay Kadam</h1>
+        <p>I'm a Software Developer based in Clemson, South Carolina. Currently
+        working as a Unity VR Developer at Synthetic Personas Lab@@Clemson University, building intelligent virtual personas and
+            conversational AI focused on speech domain.</p>
+
+            <p>I also build and publish games such as story-rich single-player, VR interaction games and random simulators.
+            </p>
+        </div>
+    <div class="contact-container d-flex align items-center justify-content-center my-5">
+        <p>Github: <a href="https://github.com/Jay-A-Kad">Jay-A-Kad</a></p>
+        <p>
+            Email:
+            <button type="button" onclick="copyEmailText('jaykadam@proton.me','copyStatus')">
+                jaykadam@proton.me
+            </button>
+            <small id="copyStatus" class="ms-2"></small>
+        </p>
+    </div>
+
+    @* projects *@
+
+    <div class="row">
+    @foreach (ProjectsModel p in Model.Projects){
+        <div class="col-12 col-md-6 col-lg-4 mb-4">
+            <div class="card project-card h-100">
+                <div class="card-body">
+                    <div class="card-header">
+                        <h5 class="card-title">@p.Title</h5>
+                        <p class="card-codeAvail">@p.codeAvail</p>
+                    </div>
+      
+                <video>@p.VideoUrl</video>
+                <p class="card-description">@p.Description</p>
+            
+            @* tools tags *@
+
+                <div class="tags-container">
+                    @foreach(var t in p.ToolsTags){
+                        <span class="badge tool-badge">@t</span>
+                    }
+                </div>
+
+            @* git and demo links *@
+
+                <div class="demo-container">
+                    <a class="btn" href=$"{@p.GitURL}">GitURL</a>
+                    <a class="btn" href=$"{@p.DemoURL}">Visit Site</a>
+                </div>
+                </div>
+            </div>
+        </div>
+    }
+       
+    </div>
+
+</div>
